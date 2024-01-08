@@ -1,0 +1,100 @@
+/* font family */
+@font-face {
+    font-family: Ubuntu_Mono;
+    src: url(".././font/Roboto/Roboto-Regular.ttf");
+  }
+/* font family ends */
+*{
+    font-family: Ubuntu_Mono;
+}
+.main_body{
+    background-color: #eee;
+}
+
+/* Navbar starts*/
+
+.nav_inside ul.nav_left{
+    list-style-type: none;
+    display: flex;
+}
+.nav_inside ul.nav_left > li{
+    text-align: center;
+}
+.nav_inside ul.nav_left > li > a{
+    font-size: 1.1rem;
+    padding: 0.5rem;
+    display: block;
+    width: 8rem;
+}
+.nav_inside .nav_right .nav_right_inside > a{
+    border: 1px solid #000;
+    font-size: 1.4rem;
+    padding: 0.3rem;
+    display: block;
+}
+
+.menu_level_1, .menu_level_2{ 
+    display: none;
+}
+
+.nav_inside .nav_left .sub_menu_1, 
+.nav_inside .nav_left .sub_menu_2{ position: relative;}
+
+.nav_inside .nav_left .sub_menu_1:hover .menu_level_1{
+    display: block;
+    position: absolute;
+    width: 100%;
+    top: calc(100%);
+    text-align: left;
+}
+
+.nav_inside .nav_left .sub_menu_1 .menu_level_1 > li > a{
+    font-size: 1rem;
+    padding: 0.4rem 0.5rem;
+    display: block;
+}
+.nav_inside .nav_left .sub_menu_2:hover .menu_level_2{
+    display: block;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    width: 100%;
+}
+.nav_inside .nav_left .sub_menu_2 .menu_level_2 > li > a{
+    font-size: 1rem;
+    padding: 0.2rem 0.5rem;
+    display: block;
+}
+
+.menu_level_1{
+    border: 1px solid #4b4848;
+    background-color: #ddd;
+}
+.menu_level_2{
+    border: 1px solid #4b4848;
+    background-color: #ddd;
+}
+.nav_left li:hover{
+    background-color: yellow;
+}
+.nav_inside .nav_left .sub_menu_1:after, 
+.nav_inside .nav_left .sub_menu_2:after{
+    content: "";
+    position: absolute;
+    border: solid #000;
+    border-width: 1px 1px 0px 0px;
+    padding: 3px;
+    top: 40%;
+    right: 10%;
+    transform: rotate(135deg);
+    transition: all 0.3s linear;
+}
+.nav_inside .nav_left .sub_menu_2:after{
+    top: 40%;
+    right: 5%;
+}
+.nav_inside .nav_left .sub_menu_2:hover:after{
+    transform: rotate(45deg);
+    transition: all 0.3s linear;
+
+}
