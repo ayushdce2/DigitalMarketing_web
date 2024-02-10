@@ -1,0 +1,67 @@
+/* font family */
+@font-face {
+    font-family: Ubuntu_Mono;
+    src: url(".././font/Roboto/Roboto-Regular.ttf");
+  }
+/* font family ends */
+*{
+    font-family: Ubuntu_Mono;
+}
+.main_body{
+    padding: 0px 0.3rem;
+}
+
+/* Menu */
+.top_nav_logo{
+    width: 4rem;
+    height: 4rem;
+}
+
+.top_brand_name{
+    letter-spacing: 0.15rem;
+    font-weight: bold;
+    text-shadow: 0 0 black;
+}
+.top_brand_name p:nth-child(1){
+    font-size: 1.7rem;
+}
+.top_nav_menu_wrap{ 
+    background: #000;
+    clip-path: polygon(3% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.top_nav_menu_inside{
+    height: 100%;
+}
+ul.top_nav_menu_bar{
+    height: 100%;
+}
+ul.top_nav_menu_bar li {
+    
+    width: 10rem;
+    text-align: center;
+}
+ul.top_nav_menu_bar li a{
+    font-size: 1.5rem;
+    color: #ddd;
+    display: block;
+    height: 100%;
+    padding-top: 1.1rem;
+}
+ul.top_nav_menu_bar li:hover{
+    border-bottom: 0.3rem solid #f00;
+}
+ul.top_nav_menu_bar li:hover a{
+    padding-top: 1.1rem;
+    text-shadow: 0 0 #fff;
+}
+.top_nav_quote a{
+    color: #ddd;
+    border: 1px solid #ddd;
+    padding: 0.7rem;
+    text-shadow: 0 0 #fff;
+}
+.top_nav_quote:hover a{
+    color: #000;
+    background-color: #ddd;
+    text-shadow: 0 0 #000;
+}
