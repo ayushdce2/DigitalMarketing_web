@@ -65,3 +65,12 @@ ul.top_nav_menu_bar li:hover a{
     background-color: #ddd;
     text-shadow: 0 0 #000;
 }
+
+/* Responsive code */
+
+.top_nav_open{
+    width: 50%!important;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}

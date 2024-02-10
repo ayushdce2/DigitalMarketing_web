@@ -22,6 +22,7 @@ ul{
 .flex_justify_center{ justify-content: center;}
 .flex_justify_sp{ justify-content: space-between;}
 .flex_align_stretch{ align-items: stretch;}
+.flex_align_self_center{ align-self: center;}
 .flex_gap_1_3rem{ gap:1.3rem;}
 .flex_gap_0_3rem{ gap:0.3rem;}
 .flex_gap_0_5rem{ gap:0.5rem;}

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tapasvi Marketing</title>
     <link rel="stylesheet" href="./assets/css/common_style.css"/>
-    <link rel="stylesheet" href="./assets/css/style_index.css"/>
     <link rel="stylesheet" href="./assets/css/responsive_index.css"/>
+    <link rel="stylesheet" href="./assets/css/style_index.css"/>
 </head>
 <body>
 <section class="main_body">
@@ -74,6 +74,9 @@
                         <a href="#">Quote Now</a>
                     </div>
                 </div>
+                <div class="flex_align_self_center">
+                    <button onclick="open_nav()">adada</button>
+                </div>
             </div>
 
         </div>
@@ -100,7 +103,11 @@
     </footer>
 <!-- footer ends -->
 </section>
-
+<script>
+    function open_nav(){
+        document.getElementsByClassName("top_nav_menu_wrap")[0].classList.toggle("top_nav_open");
+    }
+</script>
 <script src="./assets/js/web_common_js.js"></script>
 </body>
 </html>

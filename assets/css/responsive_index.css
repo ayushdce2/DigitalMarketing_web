@@ -1,0 +1,54 @@
+@media only screen and (max-width:768px){
+    .main_body{ height: 100vh;
+    position: relative;}
+    /* top header */
+    .top_header_main .top_header_inside {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    .top_header_main .top_header_icon{
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+    .top_header_main p a{
+        font-size: 3vw;
+    }
+    .top_header_main .top_header_email{
+        gap: 1rem;
+    }
+    /* Navbar */
+    .top_nav_bar_wrap .top_nav_logo{
+        width: 15rem;
+        height: 15rem;
+    }
+    .top_nav_bar_wrap .top_brand_name p:nth-child(1){
+        font-size: 5vw;
+    }
+    .top_nav_bar_wrap .top_brand_name p:nth-child(2){
+        font-size: 3vw;
+    }
+    .top_nav_bar_wrap .top_nav_menu_wrap{
+        clip-path: unset;
+        Qbackground-color: unset;
+        position: absolute;
+        flex-direction: column;
+        width: 0px;
+        right: 0;
+    }
+    .top_nav_bar_wrap .top_nav_menu_inside{
+        Qdisplay: none;
+        Qposition: relative;
+    }
+    .top_nav_bar_wrap .top_nav_quote{
+        Qdisplay: none;
+    }
+    .top_nav_bar_wrap .top_nav_bar_inside{
+        justify-content: space-between;
+    }
+    .top_nav_bar_wrap ul.top_nav_menu_bar{
+        flex-direction: column;
+    }
+    .top_nav_bar_wrap ul.top_nav_menu_bar li a{
+        color: #f40505;
+    }
+}
