@@ -32,8 +32,13 @@
         Qbackground-color: unset;
         position: absolute;
         flex-direction: column;
-        width: 0px;
-        right: 0;
+        width: 50%!important;
+        left: 101%;
+        overflow: hidden;
+        align-items: center;
+        transition: all 1s linear;
+        transform: translate(0%,-50%);
+        top:10%;
     }
     .top_nav_bar_wrap .top_nav_menu_inside{
         Qdisplay: none;
@@ -50,5 +55,8 @@
     }
     .top_nav_bar_wrap ul.top_nav_menu_bar li a{
         color: #f40505;
+    }
+    .top_nav_bar_wrap .hamburger_icon{
+        display: block;
     }
 }
