@@ -41,11 +41,11 @@ ul.top_nav_menu_bar li {
     text-align: center;
 }
 ul.top_nav_menu_bar li a{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #ddd;
     display: block;
     height: 100%;
-    padding-top: 1.1rem;
+    padding-top: 1.3rem;
     letter-spacing: 0.2rem;
 }
 ul.top_nav_menu_bar li:hover{
