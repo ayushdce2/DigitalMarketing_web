@@ -60,13 +60,16 @@ ul.top_nav_menu_bar li:hover a{
     border: 1px solid #ddd;
     padding: 0.7rem;
     text-shadow: 0 0 #fff;
+    background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgb(0, 0, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: all 2s linear;
 }
-.top_nav_quote:hover a{
+.top_nav_quote a:hover{
     color: #000;
-    background-color: #ddd;
+    background-position: left;
     text-shadow: 0 0 #000;
 }
-
 .hamburger_icon{
     display: none;
     width: 3rem;
