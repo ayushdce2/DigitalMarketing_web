@@ -63,7 +63,7 @@ ul.top_nav_menu_bar li:hover a{
     background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgb(0, 0, 0) 50%);
     background-size: 200% 100%;
     background-position: right;
-    transition: all 2s linear;
+    transition: all 1s linear;
 }
 .top_nav_quote a:hover{
     color: #000;
@@ -77,11 +77,50 @@ ul.top_nav_menu_bar li:hover a{
     background-color: #000;
 }
 
-/* Responsive code */
-
 .top_nav_open{
     left: 50%!important;
     transform: translate(-50%,-50%)!important;
     overflow: auto!important;
     background: #000!important;
 }
+
+/* banner section starts */
+
+.banner_inside{
+    border:1px solid red;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 60vh;
+    background: rgb(58,60,120);
+background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%);
+}
+.banner_left{
+    padding: 1rem;
+
+}
+.banner_left .banner_left_heading p{
+    color: tomato;
+    font-size: 3.5vw;
+}
+.banner_left_description{
+    margin: 1.5rem 0px;
+    width: 70%;
+}
+.banner_left .banner_left_description p{
+    font-size: 1.2vw;
+}
+.banner_left .banner_left_buttons a{
+    display: inline-block;
+    padding: 0.5rem;
+    border: 1px solid red;
+    border-radius:1rem;
+    width: 10rem;
+}
+.banner_left .banner_left_buttons{
+    display: flex;
+    gap:1rem;
+}
+.banner_left,.banner_right{
+    border:1px solid red;
+}
+/* banner section ends */
