@@ -99,8 +99,9 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
 
 }
 .banner_left .banner_left_heading p{
-    color: tomato;
+    color: #fff;
     font-size: 3.5vw;
+    text-shadow: 1px 1px #000;
 }
 .banner_left_description{
     margin: 1.5rem 0px;
@@ -120,7 +121,112 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
     display: flex;
     gap:1rem;
 }
+
+.banner_right_inside{
+    position: relative;
+    height: 100%;
+}
+
+.banner_right_inside .banner_right_unit_1{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    perspective: 1000px;
+}
+.banner_right_inside .banner_right_unit_2{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    perspective: 1000px;
+}
+.banner_right_inside .banner_right_unit_3{
+    position: absolute;
+    top: 60%;
+    left: 60%;
+    perspective: 1000px;
+}
+.banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: animation_3d 5s linear 1s infinite alternate;
+    width: 15rem;
+}
+
+.banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: animation_3d 5s linear 2s infinite alternate;
+    
+}
+.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: animation_3d 5s linear 3s infinite forwards;
+    background-color:red;
+    width: 20rem;
+}
+@keyframes animation_3d {
+    0%   {transform: rotateY(0deg); }
+    25%  {transform: rotateY(90deg); }
+    50%  {transform: rotateY(180deg); }
+    75%  {transform: rotateY(270deg); }
+    100% {transform: rotateY(360deg); }
+  }
+
+  .banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_front,
+  .banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_back,
+  .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_front,
+  .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_back,
+  .banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_front,
+  .banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+.banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_front,
+.banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_front,
+.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_front{
+    background-color: #bbb;
+    color: white;
+    text-shadow: 1px 1px #000;  
+}
+.banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_back,
+.banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_back,
+.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back {
+    background-color: dodgerblue;
+    color: white;
+    text-shadow: 1px 1px #000;
+    transform: rotateY(180deg);
+  }
+
+
+.banner_right_inside .banner_right_unit_1 span,
+.banner_right_inside .banner_right_unit_2 span,
+.banner_right_inside .banner_right_unit_3 span{
+    position: absolute;
+    top: -10px;
+    /* border: 1px solid red; */
+    border-radius: 100%;
+    /* padding: 0.5rem; */
+    /* background-color: #ddd; */
+    left: -12px;
+    transform: rotate(333deg);
+}
+.banner_right_inside .banner_right_unit_1 p,
+.banner_right_inside .banner_right_unit_2 p,
+.banner_right_inside .banner_right_unit_3 p{
+
+    font-size: 1.5vw;
+}
 .banner_left,.banner_right{
     border:1px solid red;
 }
+
 /* banner section ends */
