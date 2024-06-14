@@ -8,7 +8,7 @@
     font-family: Ubuntu_Mono;
 }
 .main_body{
-    padding: 0px 0.3rem;
+    /*padding: 0px 0.3rem;*/
 }
 
 /* Menu */
@@ -26,7 +26,7 @@
     font-size: 1.7rem;
 }
 .top_nav_menu_wrap{ 
-    background: #000;
+    background: rgb(58, 60, 120);
     clip-path: polygon(3% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 .top_nav_menu_inside{
@@ -48,8 +48,9 @@ ul.top_nav_menu_bar li a{
     padding-top: 1.3rem;
     letter-spacing: 0.2rem;
 }
-ul.top_nav_menu_bar li:hover{
-    border-bottom: 0.3rem solid #f00;
+ul.top_nav_menu_bar li:hover,
+ul.top_nav_menu_bar li.active_page{
+    border-bottom: 0.3rem solid #7196c6;
 }
 ul.top_nav_menu_bar li:hover a{
     padding-top: 1.1rem;
@@ -60,10 +61,12 @@ ul.top_nav_menu_bar li:hover a{
     border: 1px solid #ddd;
     padding: 0.7rem;
     text-shadow: 0 0 #fff;
-    background: linear-gradient(to right, rgba(255,255,255,1) 50%, rgb(0, 0, 0) 50%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 50%, rgb(58 60 120) 50%);
     background-size: 200% 100%;
     background-position: right;
     transition: all 1s linear;
+    border-radius: 5px;
+    box-shadow: rgb(255 255 255 / 24%) 1px 1px 5px;
 }
 .top_nav_quote a:hover{
     color: #000;
@@ -89,8 +92,8 @@ ul.top_nav_menu_bar li:hover a{
 .banner_inside{
     border:1px solid red;
     display: grid;
-    grid-template-columns: 50% 50%;
-    min-height: 60vh;
+    grid-template-columns: 60% 40%;
+    min-height: 70vh;
     background: rgb(58,60,120);
 background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%);
 }
@@ -100,22 +103,32 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
 }
 .banner_left .banner_left_heading p{
     color: #fff;
-    font-size: 3.5vw;
+    font-size: 5vw;
     text-shadow: 1px 1px #000;
+    letter-spacing: 0.15rem;
 }
 .banner_left_description{
-    margin: 1.5rem 0px;
-    width: 70%;
+    margin: 1.5rem 0px 2rem 0px;
+    width: 100%;
 }
 .banner_left .banner_left_description p{
-    font-size: 1.2vw;
+    font-size: 1.5vw;
+    letter-spacing: 0.02vw;
 }
 .banner_left .banner_left_buttons a{
     display: inline-block;
-    padding: 0.5rem;
-    border: 1px solid red;
-    border-radius:1rem;
-    width: 10rem;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 12rem;
+    background-color: #fff;
+    color: #5c64b9;
+    text-shadow: 0px 0px #5c64b9;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.1rem;
+    /* font-size: 1.2vw; */
+    word-spacing: 0.1rem;
 }
 .banner_left .banner_left_buttons{
     display: flex;
@@ -142,7 +155,13 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
 .banner_right_inside .banner_right_unit_3{
     position: absolute;
     top: 60%;
-    left: 60%;
+    left: 54%;
+    perspective: 1000px;
+}
+.banner_right_inside .banner_right_unit_4{
+    position: absolute;
+    top: 80%;
+    left: 17%;
     perspective: 1000px;
 }
 .banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner{
@@ -166,6 +185,14 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
     transform-style: preserve-3d;
     animation: animation_3d 5s linear 3s infinite forwards;
     background-color:red;
+    width: 18rem;
+}
+.banner_right_inside .banner_right_unit_4 .banner_right_unit_4_inner{
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    animation: animation_3d 5s linear 4s infinite forwards;
+    background-color:red;
     width: 20rem;
 }
 @keyframes animation_3d {
@@ -181,7 +208,9 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
   .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_front,
   .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_back,
   .banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_front,
-  .banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back{
+  .banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back,
+  .banner_right_inside .banner_right_unit_4 .banner_right_unit_4_inner .banner_right_unit_4_front,
+  .banner_right_inside .banner_right_unit_4 .banner_right_unit_4_inner .banner_right_unit_4_back{
     position: absolute;
     top: 0;
     left: 0;
@@ -192,14 +221,16 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
   }
 .banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_front,
 .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_front,
-.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_front{
+.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_front,
+.banner_right_inside .banner_right_unit_4 .banner_right_unit_4_inner .banner_right_unit_4_front{
     background-color: #bbb;
     color: white;
     text-shadow: 1px 1px #000;  
 }
 .banner_right_inside .banner_right_unit_1 .banner_right_unit_1_inner .banner_right_unit_1_back,
 .banner_right_inside .banner_right_unit_2 .banner_right_unit_2_inner .banner_right_unit_2_back,
-.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back {
+.banner_right_inside .banner_right_unit_3 .banner_right_unit_3_inner .banner_right_unit_3_back,
+.banner_right_inside .banner_right_unit_4 .banner_right_unit_4_inner .banner_right_unit_4_back {
     background-color: dodgerblue;
     color: white;
     text-shadow: 1px 1px #000;
@@ -209,7 +240,8 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
 
 .banner_right_inside .banner_right_unit_1 span,
 .banner_right_inside .banner_right_unit_2 span,
-.banner_right_inside .banner_right_unit_3 span{
+.banner_right_inside .banner_right_unit_3 span,
+.banner_right_inside .banner_right_unit_4 span{
     position: absolute;
     top: -10px;
     /* border: 1px solid red; */
@@ -221,12 +253,13 @@ background: linear-gradient(110deg, rgb(90, 93, 184) 0%, rgba(113,150,198,1) 69%
 }
 .banner_right_inside .banner_right_unit_1 p,
 .banner_right_inside .banner_right_unit_2 p,
-.banner_right_inside .banner_right_unit_3 p{
+.banner_right_inside .banner_right_unit_3 p,
+.banner_right_inside .banner_right_unit_4 p{
 
     font-size: 1.5vw;
 }
 .banner_left,.banner_right{
-    border:1px solid red;
+    overflow: hidden;
 }
 
 /* banner section ends */
